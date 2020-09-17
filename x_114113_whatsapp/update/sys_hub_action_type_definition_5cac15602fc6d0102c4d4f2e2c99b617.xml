@@ -1,0 +1,2804 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>&lt;p&gt;Post Message to WhatsApp&lt;/p&gt;
+ &lt;p&gt;&lt;strong&gt;Inputs:&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;strong&gt;From&lt;/strong&gt; - Registered WhatsApp number in Twilio&lt;/li&gt;
+ &lt;li&gt;&lt;strong&gt;To&lt;/strong&gt; - WhatsApp number to whom the message should be sent&lt;/li&gt;
+ &lt;li&gt;&lt;strong&gt;Body&lt;/strong&gt; - Message to be posted.&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;p&gt;&lt;strong&gt;Outputs:&lt;/strong&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - Will be set to "Success" if the request succeeds or "Error" when any failure occurs.&lt;/li&gt;
+ &lt;li&gt;&lt;strong&gt;Error Message&lt;/strong&gt; - Will have a failure message if the action fails to send WhatsApp message&lt;/li&gt;
+ &lt;/ul&gt;</description>
+        <ih_action>false</ih_action>
+        <internal_name>send_a_message</internal_name>
+        <label_cache>[{"name":"{{action.from}}","label":"action➛from","type":"action","ref":""},{"name":"{{action.to}}","label":"action➛To","type":"action","ref":""},{"name":"{{action.body}}","label":"action➛Body","type":"action","ref":""},{"name":"{{action.mediaurl}}","label":"action➛MediaURl","type":"action","ref":""},{"name":"{{step[85988098-b62d-4b16-8f6a-996375f90d45].to}}","label":"step➛Parse➛to","type":"step","ref":""},{"name":"{{step[d64aee50-228b-4137-bc3a-71d8f9453370].response_body}}","label":"step➛Post Message➛Response Body","type":"step","ref":""},{"name":"{{step[d64aee50-228b-4137-bc3a-71d8f9453370].status_code}}","label":"step➛Post Message➛Status Code","type":"step","ref":""},{"name":"{{step[f577c4c4-a37d-4ea7-ba13-4fd213869134].variable}}","label":"step➛Error handling➛variable","type":"step","ref":""},{"name":"{{step[f577c4c4-a37d-4ea7-ba13-4fd213869134].status}}","label":"step➛Error handling➛Status","type":"step","ref":""},{"name":"{{step[f577c4c4-a37d-4ea7-ba13-4fd213869134].errormessage}}","label":"step➛Error handling➛ErrorMessage","type":"step","ref":""}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Send a Message</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:16:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5cac15602fc6d0102c4d4f2e2c99b617</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Send a Message</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_5cac15602fc6d0102c4d4f2e2c99b617</sys_update_name>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 15:05:14</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=5cac15602fc6d0102c4d4f2e2c99b617"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5cac15602fc6d0102c4d4f2e2c99b617"/>
+    <sys_element_mapping action="delete_multiple" query="id=5cac15602fc6d0102c4d4f2e2c99b617"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>error_message</field>
+        <id>5cac15602fc6d0102c4d4f2e2c99b617</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:03:00</sys_created_on>
+        <sys_id>dc37ad282fc6d0102c4d4f2e2c99b66c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:03:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617</table>
+        <value>{{step[f577c4c4-a37d-4ea7-ba13-4fd213869134].errormessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>5cac15602fc6d0102c4d4f2e2c99b617</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:03:00</sys_created_on>
+        <sys_id>9037ad282fc6d0102c4d4f2e2c99b66d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:03:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617</table>
+        <value>{{step[f577c4c4-a37d-4ea7-ba13-4fd213869134].status}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=5cac15602fc6d0102c4d4f2e2c99b617^sys_idNOT IN0c5ed5a02fc6d0102c4d4f2e2c99b60f,0e06ede42fc6d0102c4d4f2e2c99b638,568e59a02fc6d0102c4d4f2e2c99b6d8"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</action>
+        <cid>85988098-b62d-4b16-8f6a-996375f90d45</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Parse</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:12</sys_created_on>
+        <sys_id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:53:51</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c5ed5a02fc6d0102c4d4f2e2c99b60f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0c5ed5a02fc6d0102c4d4f2e2c99b60f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>085ed5a02fc6d0102c4d4f2e2c99b625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+	outputs.to = inputs.to.replace(/[^A-Z0-9]/ig, ''); // remove all special characters
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0c5ed5a02fc6d0102c4d4f2e2c99b60f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>cc5ed5a02fc6d0102c4d4f2e2c99b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0c5ed5a02fc6d0102c4d4f2e2c99b60f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>045ed5a02fc6d0102c4d4f2e2c99b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>4c5ed5a02fc6d0102c4d4f2e2c99b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>to</field>
+        <id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>045ed5a02fc6d0102c4d4f2e2c99b626</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0c5ed5a02fc6d0102c4d4f2e2c99b60f</table>
+        <value>{{action.to}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=0c5ed5a02fc6d0102c4d4f2e2c99b60f^sys_idNOT IN405ed5a02fc6d0102c4d4f2e2c99b615"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>to</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse">0c5ed5a02fc6d0102c4d4f2e2c99b60f</model>
+        <model_id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_0c5ed5a02fc6d0102c4d4f2e2c99b60f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:12</sys_created_on>
+        <sys_id>405ed5a02fc6d0102c4d4f2e2c99b615</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=0c5ed5a02fc6d0102c4d4f2e2c99b60f^sys_idNOT INc85ed5a02fc6d0102c4d4f2e2c99b61a"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=ph_number,uiTypeLabel=Phone Number,uiUniqueId=fbafd5cd-1497-4b91-802c-e3c3da494989</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>to</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">ph_number</internal_type>
+        <label>to</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Parse">0c5ed5a02fc6d0102c4d4f2e2c99b60f</model>
+        <model_id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0c5ed5a02fc6d0102c4d4f2e2c99b60f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>c85ed5a02fc6d0102c4d4f2e2c99b61a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:54:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</action>
+        <cid>f577c4c4-a37d-4ea7-ba13-4fd213869134</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Error handling</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:56</sys_created_on>
+        <sys_id>0e06ede42fc6d0102c4d4f2e2c99b638</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0e06ede42fc6d0102c4d4f2e2c99b638"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0e06ede42fc6d0102c4d4f2e2c99b638</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>5606ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+	outputs = new WhatsappErrorHandler().genericErrorHandler(inputs, outputs);
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0e06ede42fc6d0102c4d4f2e2c99b638</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9206ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0e06ede42fc6d0102c4d4f2e2c99b638"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>5e06ede42fc6d0102c4d4f2e2c99b655</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>response_body</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>de06ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</table>
+        <value>{{step[d64aee50-228b-4137-bc3a-71d8f9453370].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>1206ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status_code</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9206ede42fc6d0102c4d4f2e2c99b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</table>
+        <value>{{step[d64aee50-228b-4137-bc3a-71d8f9453370].status_code}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=0e06ede42fc6d0102c4d4f2e2c99b638^sys_idNOT IN8606ede42fc6d0102c4d4f2e2c99b63b,ce06ede42fc6d0102c4d4f2e2c99b63f"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>response_body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:56</sys_created_on>
+        <sys_id>8606ede42fc6d0102c4d4f2e2c99b63b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status_code</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:56</sys_created_on>
+        <sys_id>ce06ede42fc6d0102c4d4f2e2c99b63f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=0e06ede42fc6d0102c4d4f2e2c99b638^sys_idNOT IN9a06ede42fc6d0102c4d4f2e2c99b644,9a06ede42fc6d0102c4d4f2e2c99b64d"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8281e99a-1c4e-42bb-9a40-7e0240bbd619</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>Sucess</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Status</label>
+        <mandatory>true</mandatory>
+        <max_length>7995</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9a06ede42fc6d0102c4d4f2e2c99b644</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=2bcbf3c0-0cff-4200-ac46-56a993732447</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>errormessage</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ErrorMessage</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9a06ede42fc6d0102c4d4f2e2c99b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</action>
+        <cid>d64aee50-228b-4137-bc3a-71d8f9453370</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Post Message</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:11</sys_created_on>
+        <sys_id>568e59a02fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 15:05:13</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=568e59a02fc6d0102c4d4f2e2c99b6d8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>00f365a42fc6d0102c4d4f2e2c99b6da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>https://api.twilio.com/2010-04-01/Accounts/ACd41aa1cefaa36543a02e755cb350741d/Messages.json</value>
+        <variable display_value="">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>04f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>ef751ff07301330025d71afe2ff6a7f9</value>
+        <variable display_value="">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>40f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>form-url-encoded</value>
+        <variable display_value="">bc79234a87d01300dd637d5e27cb0b24</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>4cf365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>668e59a02fc6d0102c4d4f2e2c99b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>88f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>495f91e02fc6d0102c4d4f2e2c99b6c6</value>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>a28e59a02fc6d0102c4d4f2e2c99b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>c0f365a42fc6d0102c4d4f2e2c99b6da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>c4f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>post</value>
+        <variable display_value="">e85b7ebf47222200b4fad7527c9a71e3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=568e59a02fc6d0102c4d4f2e2c99b6d8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>228e59a02fc6d0102c4d4f2e2c99b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>0cf365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>6e8e59a02fc6d0102c4d4f2e2c99b6e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>c0f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_URL_encoded_map</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>84f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 15:05:13</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>Body={{action.body}}&amp;From=whatsapp%3A%2B{{action.from}}&amp;To=whatsapp%3A%2B{{step[85988098-b62d-4b16-8f6a-996375f90d45].to}}&amp;mediaUrl={{action.mediaurl}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>48f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_method</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>00f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>ccf365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_type</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>88f365a42fc6d0102c4d4f2e2c99b6d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>retry_policy</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>4cf365a42fc6d0102c4d4f2e2c99b6d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=568e59a02fc6d0102c4d4f2e2c99b6d8^sys_idNOT IN08f365a42fc6d0102c4d4f2e2c99b6cc"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=708ed056-b391-45b8-9502-63735b33d4c0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Post Message">568e59a02fc6d0102c4d4f2e2c99b6d8</model>
+        <model_id>568e59a02fc6d0102c4d4f2e2c99b6d8</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_568e59a02fc6d0102c4d4f2e2c99b6d8</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>08f365a42fc6d0102c4d4f2e2c99b6cc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:53:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=5cac15602fc6d0102c4d4f2e2c99b617^sys_idNOT IN12bd11a02fc6d0102c4d4f2e2c99b64d,8ebdd1ac2f86d0102c4d4f2e2c99b602,c1a3b5a02f0ad0102c4d4f2e2c99b694,d2bd11a02fc6d0102c4d4f2e2c99b647"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d9f560c3-4b18-497c-93de-73bbc7fe9d09</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Body</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</model>
+        <model_id>5cac15602fc6d0102c4d4f2e2c99b617</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:21:38</sys_created_on>
+        <sys_id>12bd11a02fc6d0102c4d4f2e2c99b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:21:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=ph_number,uiTypeLabel=Phone Number,uiUniqueId=7049c4b4-cfd7-46f8-ba74-639893c9ff48</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>14155238886</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">ph_number</internal_type>
+        <label>from</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</model>
+        <model_id>5cac15602fc6d0102c4d4f2e2c99b617</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:21:37</sys_created_on>
+        <sys_id>8ebdd1ac2f86d0102c4d4f2e2c99b602</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:21:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=url,uiTypeLabel=URL,uiUniqueId=07201060-9986-4bde-b5c7-cb7576775d21</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>mediaurl</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="URL">url</internal_type>
+        <label>MediaURl</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</model>
+        <model_id>5cac15602fc6d0102c4d4f2e2c99b617</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:57:24</sys_created_on>
+        <sys_id>c1a3b5a02f0ad0102c4d4f2e2c99b694</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:57:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=ph_number,uiTypeLabel=Phone Number,uiUniqueId=b671734c-6f40-49f9-8bd4-9c6cdfd639f8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>to</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">ph_number</internal_type>
+        <label>To</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</model>
+        <model_id>5cac15602fc6d0102c4d4f2e2c99b617</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:21:38</sys_created_on>
+        <sys_id>d2bd11a02fc6d0102c4d4f2e2c99b647</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:21:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=5cac15602fc6d0102c4d4f2e2c99b617^sys_idNOT IN24b629282fc6d0102c4d4f2e2c99b64a,e0b629282fc6d0102c4d4f2e2c99b651"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=92bfc875-16d5-47b6-aaaa-9ed744d301ea</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error_message</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</model>
+        <model_id>5cac15602fc6d0102c4d4f2e2c99b617</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:00:50</sys_created_on>
+        <sys_id>24b629282fc6d0102c4d4f2e2c99b64a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:02:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=98362a20-9d7b-4190-a9d9-f254ed7a18cb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>status</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</model>
+        <model_id>5cac15602fc6d0102c4d4f2e2c99b617</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:00:50</sys_created_on>
+        <sys_id>e0b629282fc6d0102c4d4f2e2c99b651</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:03:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_step_instance action="delete_multiple" query="action=5cac15602fc6d0102c4d4f2e2c99b617^sys_idNOT IN0c5ed5a02fc6d0102c4d4f2e2c99b60f,0e06ede42fc6d0102c4d4f2e2c99b638,568e59a02fc6d0102c4d4f2e2c99b6d8"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</action>
+        <cid>85988098-b62d-4b16-8f6a-996375f90d45</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Parse</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:12</sys_created_on>
+        <sys_id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:53:51</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c5ed5a02fc6d0102c4d4f2e2c99b60f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0c5ed5a02fc6d0102c4d4f2e2c99b60f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>085ed5a02fc6d0102c4d4f2e2c99b625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+	outputs.to = inputs.to.replace(/[^A-Z0-9]/ig, ''); // remove all special characters
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0c5ed5a02fc6d0102c4d4f2e2c99b60f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>cc5ed5a02fc6d0102c4d4f2e2c99b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0c5ed5a02fc6d0102c4d4f2e2c99b60f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>045ed5a02fc6d0102c4d4f2e2c99b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>4c5ed5a02fc6d0102c4d4f2e2c99b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>to</field>
+        <id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>045ed5a02fc6d0102c4d4f2e2c99b626</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:13</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0c5ed5a02fc6d0102c4d4f2e2c99b60f</table>
+        <value>{{action.to}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=0c5ed5a02fc6d0102c4d4f2e2c99b60f^sys_idNOT IN405ed5a02fc6d0102c4d4f2e2c99b615"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>to</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse">0c5ed5a02fc6d0102c4d4f2e2c99b60f</model>
+        <model_id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_0c5ed5a02fc6d0102c4d4f2e2c99b60f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:12</sys_created_on>
+        <sys_id>405ed5a02fc6d0102c4d4f2e2c99b615</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:24:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=0c5ed5a02fc6d0102c4d4f2e2c99b60f^sys_idNOT INc85ed5a02fc6d0102c4d4f2e2c99b61a"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=ph_number,uiTypeLabel=Phone Number,uiUniqueId=fbafd5cd-1497-4b91-802c-e3c3da494989</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>to</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">ph_number</internal_type>
+        <label>to</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Parse">0c5ed5a02fc6d0102c4d4f2e2c99b60f</model>
+        <model_id>0c5ed5a02fc6d0102c4d4f2e2c99b60f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0c5ed5a02fc6d0102c4d4f2e2c99b60f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:24:13</sys_created_on>
+        <sys_id>c85ed5a02fc6d0102c4d4f2e2c99b61a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:54:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</action>
+        <cid>f577c4c4-a37d-4ea7-ba13-4fd213869134</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Error handling</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:56</sys_created_on>
+        <sys_id>0e06ede42fc6d0102c4d4f2e2c99b638</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0e06ede42fc6d0102c4d4f2e2c99b638"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0e06ede42fc6d0102c4d4f2e2c99b638</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>5606ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+	outputs = new WhatsappErrorHandler().genericErrorHandler(inputs, outputs);
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>0e06ede42fc6d0102c4d4f2e2c99b638</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9206ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0e06ede42fc6d0102c4d4f2e2c99b638"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>5e06ede42fc6d0102c4d4f2e2c99b655</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>response_body</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>de06ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</table>
+        <value>{{step[d64aee50-228b-4137-bc3a-71d8f9453370].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>1206ede42fc6d0102c4d4f2e2c99b656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status_code</field>
+        <id>0e06ede42fc6d0102c4d4f2e2c99b638</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9206ede42fc6d0102c4d4f2e2c99b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</table>
+        <value>{{step[d64aee50-228b-4137-bc3a-71d8f9453370].status_code}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=0e06ede42fc6d0102c4d4f2e2c99b638^sys_idNOT IN8606ede42fc6d0102c4d4f2e2c99b63b,ce06ede42fc6d0102c4d4f2e2c99b63f"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>response_body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:56</sys_created_on>
+        <sys_id>8606ede42fc6d0102c4d4f2e2c99b63b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status_code</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:56</sys_created_on>
+        <sys_id>ce06ede42fc6d0102c4d4f2e2c99b63f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=0e06ede42fc6d0102c4d4f2e2c99b638^sys_idNOT IN9a06ede42fc6d0102c4d4f2e2c99b644,9a06ede42fc6d0102c4d4f2e2c99b64d"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8281e99a-1c4e-42bb-9a40-7e0240bbd619</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>Sucess</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Status</label>
+        <mandatory>true</mandatory>
+        <max_length>7995</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9a06ede42fc6d0102c4d4f2e2c99b644</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=2bcbf3c0-0cff-4200-ac46-56a993732447</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>errormessage</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ErrorMessage</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Error handling">0e06ede42fc6d0102c4d4f2e2c99b638</model>
+        <model_id>0e06ede42fc6d0102c4d4f2e2c99b638</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0e06ede42fc6d0102c4d4f2e2c99b638</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:57:57</sys_created_on>
+        <sys_id>9a06ede42fc6d0102c4d4f2e2c99b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:57:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Send a Message">5cac15602fc6d0102c4d4f2e2c99b617</action>
+        <cid>d64aee50-228b-4137-bc3a-71d8f9453370</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Post Message</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:11</sys_created_on>
+        <sys_id>568e59a02fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 15:05:13</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=568e59a02fc6d0102c4d4f2e2c99b6d8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>00f365a42fc6d0102c4d4f2e2c99b6da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>https://api.twilio.com/2010-04-01/Accounts/ACd41aa1cefaa36543a02e755cb350741d/Messages.json</value>
+        <variable display_value="">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>04f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>ef751ff07301330025d71afe2ff6a7f9</value>
+        <variable display_value="">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>40f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>form-url-encoded</value>
+        <variable display_value="">bc79234a87d01300dd637d5e27cb0b24</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>4cf365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>668e59a02fc6d0102c4d4f2e2c99b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>88f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>495f91e02fc6d0102c4d4f2e2c99b6c6</value>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>a28e59a02fc6d0102c4d4f2e2c99b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>c0f365a42fc6d0102c4d4f2e2c99b6da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>568e59a02fc6d0102c4d4f2e2c99b6d8</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>c4f365a42fc6d0102c4d4f2e2c99b6d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <value>post</value>
+        <variable display_value="">e85b7ebf47222200b4fad7527c9a71e3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=568e59a02fc6d0102c4d4f2e2c99b6d8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>228e59a02fc6d0102c4d4f2e2c99b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>0cf365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:25:12</sys_created_on>
+        <sys_id>6e8e59a02fc6d0102c4d4f2e2c99b6e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:25:12</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>c0f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_URL_encoded_map</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>84f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 15:05:13</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>Body={{action.body}}&amp;From=whatsapp%3A%2B{{action.from}}&amp;To=whatsapp%3A%2B{{step[85988098-b62d-4b16-8f6a-996375f90d45].to}}&amp;mediaUrl={{action.mediaurl}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>48f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_method</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>00f365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>ccf365a42fc6d0102c4d4f2e2c99b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_type</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>88f365a42fc6d0102c4d4f2e2c99b6d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>retry_policy</field>
+        <id>568e59a02fc6d0102c4d4f2e2c99b6d8</id>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>4cf365a42fc6d0102c4d4f2e2c99b6d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:48:47</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=568e59a02fc6d0102c4d4f2e2c99b6d8^sys_idNOT IN08f365a42fc6d0102c4d4f2e2c99b6cc"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=708ed056-b391-45b8-9502-63735b33d4c0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Post Message">568e59a02fc6d0102c4d4f2e2c99b6d8</model>
+        <model_id>568e59a02fc6d0102c4d4f2e2c99b6d8</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_568e59a02fc6d0102c4d4f2e2c99b6d8</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:48:47</sys_created_on>
+        <sys_id>08f365a42fc6d0102c4d4f2e2c99b6cc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:53:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617^sys_idNOT IN4da3b5a02f0ad0102c4d4f2e2c99b698,96bd11a02fc6d0102c4d4f2e2c99b645,9abd11a02fc6d0102c4d4f2e2c99b64b,d6bd11a02fc6d0102c4d4f2e2c99b651"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>mediaurl</element>
+        <help/>
+        <hint/>
+        <label>MediaURl</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:57:24</sys_created_on>
+        <sys_id>4da3b5a02f0ad0102c4d4f2e2c99b698</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:57:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from</element>
+        <help/>
+        <hint>The Official Phone number</hint>
+        <label>from</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:21:38</sys_created_on>
+        <sys_id>96bd11a02fc6d0102c4d4f2e2c99b645</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:21:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>to</element>
+        <help/>
+        <hint/>
+        <label>To</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:21:38</sys_created_on>
+        <sys_id>9abd11a02fc6d0102c4d4f2e2c99b64b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:21:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body</element>
+        <help/>
+        <hint/>
+        <label>Body</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 13:21:38</sys_created_on>
+        <sys_id>d6bd11a02fc6d0102c4d4f2e2c99b651</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 13:21:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617^sys_idNOT IN2cb629282fc6d0102c4d4f2e2c99b64f,e8b629282fc6d0102c4d4f2e2c99b655"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>error_message</element>
+        <help/>
+        <hint/>
+        <label>Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:00:50</sys_created_on>
+        <sys_id>2cb629282fc6d0102c4d4f2e2c99b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:00:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>status</element>
+        <help/>
+        <hint/>
+        <label>status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5cac15602fc6d0102c4d4f2e2c99b617</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>praveen</sys_created_by>
+        <sys_created_on>2020-07-13 14:00:51</sys_created_on>
+        <sys_id>e8b629282fc6d0102c4d4f2e2c99b655</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Whatsapp Spoke" source="x_114113_whatsapp">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Whatsapp Spoke">fa0811ac2f86d0102c4d4f2e2c99b61b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>praveen</sys_updated_by>
+        <sys_updated_on>2020-07-13 14:00:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>
